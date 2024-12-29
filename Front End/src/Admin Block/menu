@@ -1,0 +1,317 @@
+        {/* Size */}
+
+          <div className="py-3">
+            <button onClick={openDropDown} className="pb-3 w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Size
+                </div>
+                <span
+                  className={`me-3 transition-transform duration-300 ease-in-out transform ${
+                    open ? "rotate-180" :""
+                  }`}
+                >
+                  <IoIosArrowUp />
+                </span>
+              </div>
+            </button>
+
+            {open ? 
+              <Link to={"/size"}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      View Size
+                    </div>
+                  </li>
+                </ul>
+                
+              </Link>
+              :''
+            }
+          </div>
+
+          {/* Parent Category */}
+
+          <div className="py-3">
+            <button onClick={categoryDropDown} className="pb-3 w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Parent Category
+                </div>
+                <span
+                  className={`me-3 transition-transform duration-300 ease-in-out transform ${
+                    category ? "rotate-180" : ""
+                  }`}
+                >
+                  <IoIosArrowUp />
+                </span>
+              </div>
+            </button>
+
+            {category && (
+              <Link to={'/add-category'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Add Category
+                    </div>
+                  </li>
+                  <Link to={'/view-category'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      View Category
+                    </div>
+                  </li>
+                </ul>
+              </Link>
+                </ul>
+              </Link>
+            )}
+          </div>
+
+          {/* sub category */}
+          <div className="py-3">
+            <button onClick={subcategoryDropDown} className="pb-3 w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Sub Category
+                </div>
+                <span
+                  className={`me-3 transition-transform duration-300 ease-in-out transform ${
+                    subcategory ? "rotate-180" : ""
+                  }`}
+                >
+                  <IoIosArrowUp />
+                </span>
+              </div>
+            </button>
+
+            {subcategory && (
+              <Link to={'/add-sub-category'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Add Sub Category
+                    </div>
+                  </li>
+                  <Link to={'/view-sub-category'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      View Sub Category
+                    </div>
+                  </li>
+                </ul>
+              </Link>
+                </ul>
+              </Link>
+            )}
+          </div>
+
+          {/* Product */}
+          <div className="py-3">
+            <button onClick={productDropDown} className="pb-3 w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Product
+                </div>
+                <span
+                  className={`me-3 transition-transform duration-300 ease-in-out transform ${
+                    product ? "rotate-180" : ""
+                  }`}
+                >
+                  <IoIosArrowUp />
+                </span>
+              </div>
+            </button>
+
+            {product && (
+              <Link to={'/product-details'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Prodoct Detail
+                    </div>
+                  </li>
+                  <Link to={'/product-items'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Product Items
+                    </div>
+                  </li>
+                </ul>
+              </Link>
+                </ul>
+              </Link>
+            )}
+          </div>
+
+          {/* Story */}
+          <div className="py-3">
+            <button onClick={storyDropDown} className="pb-3 w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Story
+                </div>
+                <span
+                  className={`me-3 transition-transform duration-300 ease-in-out transform ${
+                    story ? "rotate-180" : ""
+                  }`}
+                >
+                  <IoIosArrowUp />
+                </span>
+              </div>
+            </button>
+
+            {story && (
+              <Link to={'/story-details'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Story Detail
+                    </div>
+                  </li>
+                  <Link to={'/story-view'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Story View
+                    </div>
+                  </li>
+                </ul>
+              </Link>
+                </ul>
+              </Link>
+            )}
+          </div>
+
+          {/* order */}
+          <div className="py-3">
+         <Link to={'/orders'}>
+         <button className="pb-3 w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Orders
+                </div>
+               
+              </div>
+            </button>
+         </Link>
+          </div>
+
+          {/* slider */}
+          <div className="py-3">
+            <button onClick={sliderDropDown} className="pb-3 w-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Slider
+                </div>
+                <span
+                  className={`me-3 transition-transform duration-300 ease-in-out transform ${
+                    slider ? "rotate-180" : ""
+                  }`}
+                >
+                  <IoIosArrowUp />
+                </span>
+              </div>
+            </button>
+
+            {slider && (
+              <Link to={'/slider-details'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Slider Details
+                    </div>
+                  </li>
+                  <Link to={'/slider-view'}>
+                <ul>
+                  <li>
+                    <div className=" py-3 flex gap-3 items-center text-white hover:bg-red-400 dark:hover:bg-gray-700 dark:hover:text-white transition-colors duration-200 ease-in-out">
+                      <div className="text-[20px]">
+                        <VscCircleSmall />
+                      </div>
+                      Slider View
+                    </div>
+                  </li>
+                </ul>
+              </Link>
+                </ul>
+              </Link>
+            )}
+          </div>
+
+          {/* Term And Condition */}
+          <div className="py-3">
+            <button onClick={sliderDropDown} className="pb-5 w-full">
+            <div className="flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                  <div className="text-[20px]">
+                    <LuPointer />
+                  </div>
+                  Term And Condition
+                </div>
+                {/* <span
+                  className={`me-3 transition-transform duration-300 ease-in-out transform ${
+                    slider ? "rotate-180" : ""
+                  }`}
+                >
+                  <IoIosArrowUp />
+                </span> */}
+              </div>
+            </button>
+            </div>
